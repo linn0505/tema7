@@ -10,29 +10,25 @@
 
 <body>
     <P>Hvad er længden?</P>
+    <input type="text" id="længde">
+
     <P>Hvad er bredden?</P>
+    <input type="text" id="bredde">
+
+    <button>Udregn areal og se resultat i console</button>
+
     <script>
-        let længde = 3;
-        let bredde = 5;
-        let areal = længde * bredde;
-        let resultat;
+        document.querySelector("button").addEventListener("click", button_clicked);
 
-
-        //Hvis arealet er under 100, skal der stå: Arealet er for lille.//
-        if (areal < 100) {
-            resultat = "arealet er for lille";
+        function button_clicked() {
+            let længde = document.querySelector("#længde").value;
+            let bredde = document.querySelector("#bredde").value;
+            let areal = længde * bredde;
+            let resultat = `arealet er ${areal} kvadratmeter `;
+            console.log(resultat);
         }
-        //Er arealet mellem 100 og 200, skal der stå: Arealet er ok//
-        if (areal >= 100 && areal < 200) {
-            resultat = "arealet er ok";
-        }
-        //Er det større end (eller lig med) 200, skal der stå: Arealet er for stort//
-
-        if (areal >= 200) {
-            resultat = "arealet er for stort";
-        }
-        console.log(resultat);
     </script>
+
 
 
 

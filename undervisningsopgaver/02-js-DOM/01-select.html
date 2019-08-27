@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div id="content">
+
+        <div>
+            <a href="https://kea.dk">Link til KEA.dk</a>
+        </div>
+        <div>
+            <a href="https://github.com/linn0505/tema7.git">Link til github</a>
+        </div>
+        <div>
+            <img src="frog.png" alt="billede af frø">
+
+        </div>
+
+    </div>
+
+    <script>
+        const content = document.querySelector("#content");
+        console.log(document.querySelector("#content div"));
+        console.log(document.querySelector("#content div:nth-child(2)"));
+        console.log(document.querySelector("#content div + div + div img"));
+        console.log(document.querySelector("#content div a"));
+        console.log(document.querySelector("#content div + div a"));
+    </script>
+</body></html>
